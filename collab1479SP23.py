@@ -30,7 +30,7 @@ def main():
     jumpTable['3'] = stub                 # Cantu - call to function goes here
     jumpTable['4'] = stub                 # Delgado - call to function goes here
     jumpTable['5'] = stub                 # Garcia Tadeo - call to function goes here
-    jumpTable['6'] = stub                 # Gloria - call to function goes here
+    jumpTable['6'] = gloriaFunction       # Gloria - call to function goes here
     jumpTable['7'] = stub                 # Menifee - call to function goes here
     jumpTable['8'] = stub                 # Rountree - call to function goes here
     jumpTable['9'] = stub                 # Stewart - call to function goes here
@@ -99,11 +99,46 @@ def showMenu():
 # DESCRIPTION:      stub function created to print a single message: Not Implemented Yet
 # OUTPUT EXAMPLE:   User enters any jumpTable entry that has not been created yet
 # *****************************************************************************************
-def stub():
-    print()
-    print()
+def gloriaFunction():
 
-    print("Not implemented at this time.  Check back later.")
+
+    import random
+    play = str(input("Do you want to play rock, paper, scissors? y or n? "))
+    while (play == "y"):
+        choice = int(input("Make a choice! 1 for rock, 2 for paper, or 3 for scissors! "))
+        compchoice = random.randint(1,3)
+        if (choice == 1):
+            if (compchoice == 1):
+                print("Computer chose rock!")
+                play = str(input("Draw! Play again? y or n? "))
+            elif (compchoice == 2):
+                print("Computer chose paper!")
+                play = str(input("Computer wins! Play again? y or n? "))
+            else:
+                print("Computer chose scissors")
+                play = str(input("Player wins! Play again? y or n?"))
+        elif (choice == 2):
+                if (compchoice == 1):
+                    print("Computer chose rock!")
+                    play = str(input("Player wins! Play again? y or n? "))
+                elif (compchoice == 2):
+                    print("Computer chose paper!")
+                    play = str(input("Draw! Play again? y or n? "))
+                else:
+                    print("Comupter chose scissors")
+                    play = str(input("Computer wins! Play again? y or n?"))
+        else:
+                if (compchoice == 1):
+                    print("Computer chose rock!")
+                    play = str(input("Computer wins! Play again? y or n? "))
+                elif (compchoice == 2):
+                    print("Computer chose paper!")
+                    play = str(input("Player wins! Play again? y or n? "))
+                else:
+                    print("Compter chose scissors")
+                    play = str(input("Draw! Play again? y or n? "))
+    print("Thanks for playing!")
+    
     print("Press ENTER to continue.")
     input()    
 
