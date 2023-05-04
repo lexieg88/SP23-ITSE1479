@@ -138,6 +138,7 @@ def gloriaFunction():
                     print("Compter chose scissors")
                     play = str(input("Draw! Play again? y or n? "))
     print("Thanks for playing!")
+    
     print("Press ENTER to continue.")
     input()    
 
